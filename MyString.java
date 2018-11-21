@@ -19,7 +19,12 @@ public class MyString implements CharSequence{
     }
     return result;
   }
-  public 
+  public CharSequence subSequence(int start, int end){
+    CharSequence newone = new MyString(newone);
+    for (int i = start; i < end; i++){
+
+    }
+  }
 
 
 }

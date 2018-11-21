@@ -21,9 +21,10 @@ public class MyString implements CharSequence{
   }
   public CharSequence subSequence(int start, int end){
     CharSequence newone = new MyString(newone);
-    for (int i = start; i < end; i++){
-
+    for (int i = 0; i < end-start; i++){
+      newone.charAt(i) = data[start+i];
     }
+    return newone;
   }
 
 

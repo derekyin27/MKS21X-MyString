@@ -1,4 +1,4 @@
-    public class MyString implements CharSequence{
+    public class MyString implements CharSequence, Comparable<CharSequence>{
   private char[] data;
   public MyString(CharSequence s){
     data = new char[s.length()];
@@ -7,6 +7,8 @@
     }
   }
   public char charAt(int index){
+    if (index < 0 || index > data.length)
+    throw new
     return data[index];
   }
   public int length(){
@@ -27,5 +29,18 @@
     return finals;
   }
 
+
+
+public static void main(String[] args){
+  MyString str = new MyString("yeet");
+  System.out.println(str.charAt(3));//should print "t"
+  System.out.println("Should print t");
+  System.out.println(str.length());//should print 4
+  System.out.println("should print 4");
+  System.out.println(str);
+  System.out.println("Should print yeet")
+  System.out.println(str.subSequence(1,3));
+  System.out.println("Should print ee");
+}
 
 }

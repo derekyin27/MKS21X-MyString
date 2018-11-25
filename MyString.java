@@ -29,17 +29,31 @@
     return finals;
   }
 
+public int compareTo(CharSequence chrs){
+  int min = 0;// seeing which CharSequence has the least amount of chars
+  if (chrs.length() == this.length())
+  min = chrs.length();
+  if (chrs.length() < this.length())
+  min = chrs.length();
+  if (chrs.length() > this.length())
+  min = this.length();
+  for (int i = 0; i < min, i++){
+    if (this.charAt(i) != chrs.charAt(i))
+    return this.charAt(i) - chrs.charAt(i);// if the chars at the position of i are not equal, return the difference
+  }
+  
+}
 
 
 public static void main(String[] args){
-  MyString str = new MyString("yeet");
+  MyString str = new MyString("yeet");//testing constructor
   System.out.println(str.charAt(3));//should print "t"
   System.out.println("Should print t");
   System.out.println(str.length());//should print 4
   System.out.println("should print 4");
-  System.out.println(str);
+  System.out.println(str);// testing toString
   System.out.println("Should print yeet")
-  System.out.println(str.subSequence(1,3));
+  System.out.println(str.subSequence(1,3));//testing CharSequence
   System.out.println("Should print ee");
 }
 
